@@ -6,7 +6,7 @@ Aplikasi pemutar musik sederhana berbasis Flutter yang memungkinkan pengguna men
 
 | Home Page (Quotes) | Book Search | Detail Page | Error Handling |
 |:------------------:|:-----------:|:-----------:|:--------------:|
-| ![Home](assets/homepage.png) | ![Search](assets/musicpage.png) | ![Detail](assets/likepage.png) | ![Error](assets/playlistpage.png) |
+| ![Home](assets/home.png) | ![Search](assets/musicpage.png) | ![Like](assets/likepage.png) | ![Error](assets/playlistpage.png) |
 
 ---
 
