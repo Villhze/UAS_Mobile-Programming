@@ -5,7 +5,7 @@ Aplikasi pemutar musik sederhana berbasis Flutter yang memungkinkan pengguna men
 ## 🖼️ *App Preview*
 
 | Home Page  | Music Search | Music Player Page | Error Handling |
-|:------------------:|:-----------:|:-----------:|:--------------:|
+|:------------------:|:-----------:|:-----------:|:------------------:|
 | ![Home](assets/home.png) | ![Search](assets/musicpage.png) | ![MusicPlayer](assets/musicplayerpage.png) | ![Error](assets/error.png) |
 
 ---
