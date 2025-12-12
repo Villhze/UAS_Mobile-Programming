@@ -2,6 +2,16 @@
 
 Aplikasi pemutar musik sederhana berbasis Flutter yang memungkinkan pengguna mencari lagu, memutar preview audio, menyimpan playlist, dan menandai lagu favorit.
 
+## 🖼️ *App Preview*
+
+| Home Page (Quotes) | Book Search | Detail Page | Error Handling |
+|:------------------:|:-----------:|:-----------:|:--------------:|
+| ![Home](assets/homepage.png) | ![Search](assets/musicpage.png) | ![Detail](assets/likepage.png) | ![Error](assets/playlistpage.png) |
+
+---
+
+
+
 **Fitur utama**
 - Cari lagu menggunakan iTunes Search API.
 - Memutar preview audio dari hasil pencarian.
