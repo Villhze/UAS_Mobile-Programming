@@ -1,16 +1,59 @@
-# uts
+# DIMUSIC (UAS Mobile Programming)
 
-A new Flutter project.
+Aplikasi pemutar musik sederhana berbasis Flutter yang memungkinkan pengguna mencari lagu, memutar preview audio, menyimpan playlist, dan menandai lagu favorit.
 
-## Getting Started
+**Fitur utama**
+- Cari lagu menggunakan iTunes Search API.
+- Memutar preview audio dari hasil pencarian.
+- Menyimpan playlist lokal dan menandai lagu sebagai favorit.
 
-This project is a starting point for a Flutter application.
+**Struktur singkat**
+- Kode utama berada di folder `lib/`.
+- Service untuk pencarian lagu: `lib/services/itunes_api.dart`.
+- Model data lagu: `lib/models/song_model.dart`.
+- Halaman UI berada di `lib/pages/` dan widget di `lib/widget/`.
 
-A few resources to get you started if this is your first Flutter project:
+**Daftar Endpoint API yang digunakan**
+- iTunes Search API (untuk mencari lagu):
+	- Method: `GET`
+	- Endpoint: `https://itunes.apple.com/search`
+	- Parameter penting: `term` (kata kunci pencarian), `entity=song` (mengambil entitas lagu)
+	- Contoh request:
+		- `https://itunes.apple.com/search?term=adele&entity=song`
+	- Response: JSON; hasil utama berada di field `results` berisi array objek lagu (diproses oleh `Song.fromJson`).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Catatan: Implementasi pada proyek ini berada di `lib/services/itunes_api.dart` yang melakukan request ke URL di atas dan mengubah respons menjadi daftar `Song`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Cara Instalasi & Menjalankan (Windows)**
+Prasyarat:
+- Install Flutter SDK dan tambahkan ke `PATH`. Ikuti panduan resmi di https://docs.flutter.dev/get-started/install/windows
+- Install Android Studio (atau gunakan perangkat/emulator Android lain) dan buat emulator/aktifkan opsi developer pada perangkat fisik.
+- Pastikan `flutter` tersedia di terminal PowerShell.
+
+Langkah menjalankan proyek:
+1. Buka terminal di root proyek (folder yang berisi `pubspec.yaml`).
+2. Ambil dependensi:
+
+```
+flutter pub get
+```
+
+3. Menjalankan aplikasi pada emulator atau perangkat terhubung:
+
+```
+flutter run
+```
+
+4. (Opsional) Membangun APK release:
+
+```
+flutter build apk --release
+```
+
+Tips debug:
+- Jalankan `flutter doctor` untuk memeriksa environment dan komponen yang hilang.
+- Jika ada masalah koneksi ke iTunes API, periksa koneksi internet dan izin jaringan pada emulator/perangkat.
+
+**Kontribusi & Lisensi**
+- Proyek ini dibuat sebagai tugas UAS mata kuliah Mobile Programming. 
+
